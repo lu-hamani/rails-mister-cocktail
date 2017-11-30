@@ -5,3 +5,18 @@
 #
 #   movies = Movie.create([{ name: 'Star Wars' }, { name: 'Lord of the Rings' }])
 #   Character.create(name: 'Luke', movie: movies.first)
+
+
+puts "Seeding is a go"
+
+Cocktail.destroy_all
+
+cocktail_name = ["Aaron", "Jakob", "Camille", "Julia", "Martine" ]
+
+cocktail_name.each do |name|
+  cocktail = Cocktail.new(name: name)
+  cocktail.save
+  puts "#{cocktail.name} is saved!"
+end
+
+puts "Seeding finished"
