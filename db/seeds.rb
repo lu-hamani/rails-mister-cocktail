@@ -11,6 +11,8 @@ puts "Seeding is a go"
 
 Cocktail.destroy_all
 
+Ingredient.destroy_all
+
 cocktail_name = ["Aaron", "Jakob", "Camille", "Julia", "Martine" ]
 
 cocktail_name.each do |name|
@@ -18,5 +20,14 @@ cocktail_name.each do |name|
   cocktail.save
   puts "#{cocktail.name} is saved!"
 end
+
+ingredient_name = ["nice", "powerful", "sweet", "sour"]
+
+ingredient_name.each do |name|
+  ingredient = Ingredient.new(name: name)
+  ingredient.save
+  puts "#{ingredient.name} is saved!"
+end
+
 
 puts "Seeding finished"
