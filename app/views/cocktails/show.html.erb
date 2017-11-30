@@ -13,5 +13,10 @@
 </p>
 <% end %>
 
-<%= link_to "add dose and ingredient", new_cocktail_dose_path(@cocktail) %>
+<%= simple_form_for [@cocktail, @dose] do |f| %>
+  <%= f.input :description %>
+  <%= f.input :ingredient_id, collection: @ingredients %>
+  <%= f.submit class:"btn btn-danger" %>
+<% end %>
+
 <%= link_to "delete cocktail", cocktail_path(@cocktail), method: :delete, data: { confirm: "Are you sure ?" }, class:"btn btn-danger" %>
