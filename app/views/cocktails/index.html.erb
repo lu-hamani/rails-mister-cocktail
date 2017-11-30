@@ -1,8 +1,3 @@
-<h1>Cocktails#index</h1>
-<p>Find me in app/views/cocktails/index.html.erb</p>
+<h1 class="text-center">Mister Cocktail !</h1>
 
-<%= link_to "Add cocktail", new_cocktail_path %>
-
-<% @cocktails.each do |cocktail|%>
-<h2><%= link_to cocktail.name, cocktail_path(cocktail) %></h2>
-<% end %>
+<%= render 'shared/card' %>

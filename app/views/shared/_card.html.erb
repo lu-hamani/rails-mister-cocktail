@@ -1,0 +1,17 @@
+<div class="container">
+  <div class="row">
+    <% @cocktails.each do |cocktail|%>
+    <div class="col-xs-12 col-sm-4">
+      <div class="card" style="background-image: url(<%= image_path "001-cocktail-1.png" %>);">
+        <div class="card-category"><%= cocktail.name %></div>
+        <div class="card-description">
+          <%= link_to "Go to cocktail", cocktail_path(cocktail), class:"btn btn-danger" %>
+        </div>
+      </div>
+    </div>
+    <% end %>
+  </div>
+</div>
+
+
+

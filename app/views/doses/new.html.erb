@@ -3,6 +3,6 @@
 
 <%= simple_form_for [@cocktail, @dose] do |f| %>
   <%= f.input :description %>
-  <%= f.input :ingredient, collection: @ingredients %>
+  <%= f.input :ingredient_id, collection: @ingredients %>
   <%= f.submit class:"btn btn-danger" %>
 <% end %>
