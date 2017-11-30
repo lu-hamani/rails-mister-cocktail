@@ -21,7 +21,7 @@ cocktail_name.each do |name|
   puts "#{cocktail.name} is saved!"
 end
 
-ingredient_name = ["nice", "powerful", "sweet", "sour"]
+ingredient_name = ["nice", "powerful", "sweet", "sour", "love"]
 
 ingredient_name.each do |name|
   ingredient = Ingredient.new(name: name)

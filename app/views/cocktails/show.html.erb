@@ -8,10 +8,11 @@
   <li>
     <%= dose.description %>
     <%= dose.ingredient[:name] %>
+    <%= link_to "delete dose", cocktail_dose_path(@cocktail, dose.id), method: :delete, data: { confirm: "Are you sure ?" }, class:"btn btn-danger" %>
   </li>
 </p>
 <% end %>
 
 
 <%= link_to "add dose and ingredient", new_cocktail_dose_path(@cocktail) %>
-<%= link_to "delete recipe", cocktail_path(@cocktail), method: :delete, data: { confirm: "Are you sure ?" }, class:"btn btn-danger" %>
+<%= link_to "delete cocktail", cocktail_path(@cocktail), method: :delete, data: { confirm: "Are you sure ?" }, class:"btn btn-danger" %>
