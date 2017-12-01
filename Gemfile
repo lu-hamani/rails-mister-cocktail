@@ -32,7 +32,8 @@ gem 'jbuilder', '~> 2.5'
 # gem 'redis', '~> 3.0'
 # Use ActiveModel has_secure_password
 # gem 'bcrypt', '~> 3.1.7'
-
+# image security
+gem 'figaro'
 #front end gems
 gem "bootstrap-sass"
 gem "font-awesome-sass"
