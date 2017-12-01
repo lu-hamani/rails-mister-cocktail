@@ -2,7 +2,8 @@
   <div class="row">
     <% @cocktails.each do |cocktail|%>
     <div class="col-xs-12 col-sm-4">
-      <div class="card" style="background-image: linear-gradient(rgba(0,0,0,0.3), rgba(0,0,0,0.2)),url(<%= image_path "https://picsum.photos/500/300/?random" %>);">
+      <div class="card" style="background-image: linear-gradient(rgba(0,0,0,0.3), rgba(0,0,0,0.2)),
+         ">
         <div class="card-category"><%= cocktail.name %></div>
         <div class="card-description">
           <%= link_to "Go to cocktail", cocktail_path(cocktail), class:"btn btn-danger" %>
@@ -13,5 +14,11 @@
   </div>
 </div>
 
-
+<div class="container">
+  <div class="row">
+    <div class="col-xs-12 col-sm-4 col-sm-offset-5">
+      <%= link_to "Add a cocktail", new_cocktail_path, class:"btn btn-warning" %>
+    </div>
+  </div>
+</div>
 
