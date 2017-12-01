@@ -47,3 +47,15 @@
 .card-link:hover {
   opacity: 0.1;
 }
+
+.card-border {
+  border-radius: 8px;
+  background-color: #ebebeb;
+  box-shadow: 1px 1px 10px #999;
+  margin-top: 20px;
+  padding: 20px;
+}
+
+.container-card {
+  margin-bottom: 50px;
+}

@@ -1,4 +1,14 @@
-<h1 class="text-center">Mister Cocktail !</h1>
 
+<%= render 'shared/banner' %>
+<div class="container container-card">
 <%= render 'shared/card' %>
 
+    <div class="row">
+      <div class="col-xs-12 col-sm-4 col-sm-offset-4 card-border">
+        <h3>Add your cocktail</h3>
+        <div id="cocktail-form">
+          <%= render 'cocktails/form' %>
+        </div>
+      </div>
+    </div>
+</div>

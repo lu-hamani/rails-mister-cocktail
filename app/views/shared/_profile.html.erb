@@ -1,0 +1,37 @@
+<div class="container">
+    <div class="grid text-center">
+      <div class="main">
+        <div class="card-content">
+          <%= cl_image_tag @cocktail.photo.path, height: 150, width: 150, crop: :fill if @cocktail.photo? %>
+          <h2><%= @cocktail.name %></h2>
+          <%= link_to "Delete cocktail", cocktail_path(@cocktail), method: :delete, data: { confirm: "Are you sure ?" }, class:"btn btn-primary" %>
+        </div>
+      </div>
+      <div class="stats">
+        <div class="card-content">
+          <h3>Drink's doses</h3>
+          <% @cocktail.doses.each do |dose| %>
+          <p class="text-justify">
+            <ul>
+              <li>
+                <%= dose.description %>
+                <%= dose.ingredient[:name] %>
+              </li>
+              <br>
+              <%= link_to "Delete dose", dose_path(dose), method: :delete, data: { confirm: "Are you sure ?" }, class:"btn btn-danger" %>
+            </ul>
+          </p>
+          <% end %>
+        </div>
+      </div>
+      <div class="bio">
+        <div class="card-content text-justify">
+          <%= simple_form_for [@cocktail, @dose] do |f| %>
+            <%= f.input :description %>
+            <%= f.input :ingredient_id, collection: @ingredients %>
+            <%= f.submit class:"btn btn-success" %>
+          <% end %>
+        </div>
+      </div>
+    </div>
+  </div>
